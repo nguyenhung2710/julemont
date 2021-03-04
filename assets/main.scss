@@ -1,0 +1,990 @@
+$main-color: #FF7900;
+
+@import 'style.scss';
+
+a {
+    &:hover {
+        color: unset;
+    }
+}
+
+.main-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 3vw;
+    pointer-events: none;
+    .main {
+        &-nav {
+            display: flex;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            .main-nav {
+                &__left {
+                    margin-left: 0;
+                    margin-right: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+                &__right {
+                    margin-right: 0;
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+            }
+            .nav-list {
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                list-style: none;
+                padding: 0;
+            }
+        }
+        &-logo {
+            width: 100px;
+            min-width: 100px;
+            background: url("https://julemont-watches.com/assets/images/logo-white.svg");
+            background-size: 150px;
+            background-position: 0 calc(50% - 5px);
+            background-repeat: no-repeat;
+        }
+        &-header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 69%);
+            width: 100%;
+            height: 100%;
+        }
+    }
+    a,
+    button {
+        pointer-events: all;
+    }
+}
+
+.nav-list {
+    .nav-list__item {
+        padding: 0 10px;
+        overflow: hidden;
+        a {
+            height: 100%;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            transition: color 0.3s;
+            position: relative;
+            padding: 30px 0;
+            color: #fff;
+            &::before {
+                position: absolute;
+                width: 0;
+                height: 1px;
+                display: block;
+                content: "";
+                background: $main-color;
+                top: 100%;
+                transform: translateY(-30px);
+                left: 0;
+                transition: all 0.3s;
+            }
+            &::after {
+                position: relative;
+                top: 50%;
+                transform: translateY(50%);
+                width: 5px;
+                height: 5px;
+                display: block;
+                content: "";
+                border: solid 1px $main-color;
+                background: transparent;
+                border-radius: 100%;
+                margin-left: 3px;
+                transition: all 0.3s;
+            }
+        }
+        a.current {
+            color: $main-color;
+            &::after {
+                background-color: $main-color;
+            }
+        }
+        &:hover {
+            a {
+                &::before {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+
+.main-nav {
+    &__lang {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        li {
+            a {
+                border-right: solid 1px white;
+            }
+            &:first-child {
+                a {
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+            &:last-child {
+                a {
+                    border: none;
+                }
+            }
+        }
+        a {
+            padding: 0 10px;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: white;
+            font-size: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        a.current {
+            color: $main-color;
+        }
+    }
+    &__right {
+        .cart-button {
+            padding: 20px 10px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: white;
+            font-size: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: transparent;
+            outline: none;
+            border: none;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            line-height: 150%;
+            cursor: pointer;
+            &::after {
+                content: "(0)";
+                color: #FF7900;
+                margin-left: 3px;
+                display: block;
+            }
+        }
+    }
+}
+
+#global {
+    width: 100%;
+    height: 100%;
+    display: block;
+    main {
+        min-height: 100vh;
+    }
+}
+
+.home {
+    &-page-video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        .home-page-video__wrapper {
+            text-align: center;
+            flex: 0 0 40%;
+            max-width: 40%;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 1.5vw;
+            .wide-title--decorative {
+                font-weight: 500;
+            }
+        }
+        .container-video {
+            width: 100%;
+            position: fixed;
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, #000 100%);
+            }
+            &::after {
+                content: "";
+                bottom: 0;
+                width: 100%;
+                height: 30%;
+                position: absolute;
+                background: linear-gradient(
+            0deg
+            , #000 0%, rgba(0, 0, 0, 0) 100%);
+            }
+            .container-video__wrapper {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+            video {
+                position: absolute;
+                z-index: -1000;
+                object-fit: cover;
+            }
+        }
+        .scroll-indicator {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            padding: 3vw;
+            border: none;
+            background: transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: none;
+            cursor: pointer;
+            svg {
+                width: 100%;
+                max-width: 60px;
+            }
+        }
+    }
+    &-sens {
+        align-items: flex-start;
+        background-color: rgb(0,0,0,88%);
+        max-width: 100vw;
+        padding-bottom: 25%;
+        .home-sens {
+            &__left {
+                display: flex;
+                position: relative;
+                .img-wrapper {
+                    width: 66.66%;
+                    overflow: hidden;
+                    .js-replace-image {
+                        height: 78vh;
+                        background-size: 65vh;
+                        background-repeat: no-repeat;
+                        background-position: 5rem 4rem;
+                        padding: 0;
+                        margin: 0;
+                        overflow: hidden;
+                    }
+                    &:nth-child(1) {
+                        .js-replace-image {
+                            background-image: url("https://julemont-watches.com/resizer/medias/internalpageblockcontents/5/image/sans-titre-2@c750x951.jpg");
+                            background-attachment: fixed;
+                        }
+                    }
+                    &:nth-child(2) {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        .js-replace-image {
+                            background-image: url("https://julemont-watches.com/resizer/medias/internalpageblockcontents/6/image/carl-nenzen-loven-busqfoj6i80-unsplash@c750x951.jpg");
+                            background-position: center;
+                            background-position: 0rem 4rem;
+                            height: 92vh;
+                        }
+                    }
+                }
+            }
+            &__right {
+                padding: 3vw 0;
+            }
+        }
+    }
+    &-lovers {
+        background-color: rgba(0, 0, 0, 0.88);
+        max-width: 100vw;
+        padding-bottom: 18%;
+        .home-lovers {
+            &__left,
+            &__right {
+                top: 0;
+                left: 0;
+            }
+            &__left {
+                transform: translateX(-6vw) translateY(38%);
+                .img-wrapper {
+                    .js-replace-image {
+                        width: 100%;
+                        padding-bottom: 140%;
+                        background-size: cover;
+                        background-image: url("https://julemont-watches.com/resizer/medias/internalpageblockcontents/7/image/johan-mouchet-wlmu7-nfvae-unsplash@c750x1052.jpg")
+                    }
+                }
+            }
+            &__right {
+                transform: translateX(9vw) translateY(-6vw);
+                .img-wrapper {
+                    .js-replace-image {
+                        padding-bottom: 140%;
+                        background-image: url("https://julemont-watches.com/resizer/medias/internalpageblockcontents/8/image/dsc-0041@c750x1052.jpg");
+                        background-attachment: fixed;
+                        height: 100vh;
+                        background-size: 64vh;
+                        background-repeat: no-repeat;
+                        background-position: 55rem 7rem;
+                        overflow: hidden;
+                    }
+                }
+            }
+            &__center {
+                transform: translateY(19vh);
+            }
+        }
+    }
+    &-product {
+        padding-top: 6vw;
+        background-color: #000;
+        max-width: 100vw;
+        position: relative;
+        z-index: 9;
+        .home-product {
+            &__header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 6vw 6vw 6vw;
+                width: 100%;
+                text-align: center;
+                h2 {
+                    font-weight: 100;
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate3d(-50%, 100%, 0px);
+                        width: 15px;
+                        height: 15px;
+                        display: block;
+                        content: "";
+                        background: $main-color;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            &__slideshow {
+                box-sizing: border-box;
+                padding: 3vw 0;
+                overflow: visible;
+                .swiper {
+                    &-wrapper {
+                        align-items: center;
+                    }
+                    &-slide {
+                        padding: 0 6vw 0 6vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                        img {
+                            width: 100%;
+                            max-width: 350px;
+                            display: block;
+                            height: auto;
+                        }
+                    }
+                }
+                button {
+                    background: #000;
+                    border: none;
+                }
+                svg {
+                    background: #000;
+                    width: 100%;
+                    max-width: 60px;
+                }
+                .btn {
+                    &-prev,
+                    &-next {
+                        position: absolute;
+                        top: 35%;
+                        z-index: 9999;
+                        cursor: pointer;
+                    }
+                    &-prev {
+                        left: 15%;
+                    }
+                    &-next {
+                        right: 15%;
+                    }
+                }
+            }
+            &__footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 6vw;
+                width: 100%;
+            }
+        }
+        .slideshow-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .product-title {
+            position: absolute;
+            top: 0;
+            left: 25%;
+            z-index: 10;
+            // width: 75%;
+            // padding-right: 25%;
+            height: 10%;
+            overflow: hidden;
+            .product-title__slide {
+                display: flex;
+                align-items: flex-end;
+                overflow: hidden;
+                .title-wrapper {
+                    li {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                        letter-spacing: 6px;
+                        display: flex;
+                        align-items: flex-end;
+                        line-height: 100%;
+                        &::after {
+                            position: relative;
+                            bottom: 0;
+                            width: 11px;
+                            height: 11px;
+                            display: block;
+                            transform: translateY(-50%);
+                            content: "";
+                            border: solid 1px $main-color;
+                            background: transparent;
+                            border-radius: 100%;
+                            margin-left: 8px;
+                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+                    }
+                    p {
+                        margin-right: 10px;
+                    }
+                }
+                p {
+                    text-transform: uppercase;
+                }
+            }
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.wide {
+    &-title {
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: #ffffffb0;
+        &--decorative {
+            position: relative;
+            // font-weight: lighter;
+            // background: radial-gradient(circle, white 0%, rgba(255,255,255,0) 100%);
+            // background-position: 50% 50%;
+            // background-repeat: no-repeat;
+            // background-size: 300% 300%;
+            // -webkit-text-fill-color: transparent;
+            //-webkit-background-clip: text;
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate3d(-50%, 100%, 0px);
+                width: 15px;
+                height: 15px;
+                display: block;
+                content: "";
+                background: #FF7900;
+                border-radius: 100%;
+            }
+        }
+        .wide-title__item {
+            background-position: 50% 50%;
+            background-size: 300% 300%;
+            &:nth-child(1) {
+                transform: translate(-140.98px, 0px);
+                font-weight: 100;
+            }
+            &:nth-child(2) {
+                transform: translate(-40.98px, 0px);
+            }
+        }
+        span {
+            display: inline-block;
+            transform-origin: center top;
+            transform-style: preserve-3d;
+            white-space: nowrap;
+            opacity: 1;
+            background: radial-gradient(circle, white 0%, rgba(255,255,255,0) 100%);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 300% 300%;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            min-width: 100%;
+            &:last-child {
+                &::before {
+                    width: 50px;
+                    height: 1px;
+                    background: #FF7900;
+                    content: "";
+                    position: absolute;
+                    top: 15px;
+                    right: 100%;
+                    display: block;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &-btn {
+        position: relative;
+        min-height: 50px;
+        align-items: center;
+        font-family: "Numans", sans-serif;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        display: inline-flex;
+        border: none;
+        background: transparent;
+        color: #fff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        outline: none;
+        cursor: pointer;
+        &:hover {
+            color: $main-color;
+            &::after {
+                background: $main-color;
+                width: 50px;
+            }
+        }
+        &::before {
+            position: relative;
+            top: 0;
+            width: 5px;
+            height: 5px;
+            display: block;
+            content: "";
+            border: solid 1px $main-color;
+            background: transparent;
+            border-radius: 100%;
+            margin-right: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        &::after {
+            position: absolute;
+            width: 40px;
+            height: 1px;
+            display: block;
+            content: "";
+            background: #fff;
+            right: 0;
+            bottom: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+
+.push-footer {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    .push-footer {
+        &__inner {
+            text-align: center;
+            position: relative;
+            z-index: 9;
+            width: 100%;
+            padding: 0 6vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 12vh;
+            &__left {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 3vw;
+            }
+            .wide-btn-invert {
+                &::before {
+                    position: absolute;
+                    width: 40px;
+                    height: 1px;
+                    background: #fff;
+                    left: 0;
+                    bottom: 0;
+                    transform: translateY(-10px);
+                    top: unset;
+                    border: unset;
+                    margin-right: unset;
+                    border-radius: unset;
+                }
+                &::after {
+                    position: relative;
+                    top: 0;
+                    width: 5px;
+                    height: 5px;
+                    border: solid 1px $main-color;
+                    background: transparent;
+                    border-radius: 100%;
+                    margin-left: 8px;
+                    right: unset;
+                    bottom: unset;
+                    transform: unset;
+                }
+                &::before,
+                &::after {
+                    display: block;
+                    content: "";
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                }
+            }
+            a {
+                white-space: nowrap;
+            }
+        }
+        &__cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .replace-image {
+                background-image: url("https://julemont-watches.com/assets/images/push-contact-cover.jpg");
+                width: 100%;
+                height: 100%;
+                flex: 0 0 100%;
+                background-position: center 100%;
+                background-size: cover;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+                background-color: transparent;
+            }
+        }
+    }
+    .push-footer__inner {
+        [class*='col-'] {
+            margin-left: auto;
+            margin-right: auto;
+            flex-basis: 0;
+        }
+    }
+    p {
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.wide-btn.wide-btn-invert {
+    &:hover {
+        &::before {
+            background: #FF7900;
+            width: 50px;
+        }
+    }
+}
+
+.main-footer {
+    padding: 3vw 3vw 3vw 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+    position: relative;
+    z-index: 9;
+    .main-footer__logo {
+        width: 100%;
+        img,
+        svg {
+            width: 100%;
+            max-width: 120px;
+        }
+    }
+    .footer-navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .footer-navigation__item {
+            &:first-child {
+                p {
+                    text-transform: uppercase;
+                }
+                a {
+                    margin-bottom: 15px;
+                }
+            }
+            p {
+                margin-top: 15px;
+                margin-bottom: 0;
+                font-size: 10px;
+                color: #FFFFFF;
+                letter-spacing: 3px;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+            }
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 10px;
+            color: #fff;
+            letter-spacing: 3px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: lighter;
+            display: inline-block;
+            &:hover {
+                color: $main-color;
+            }
+            svg {
+                &:hover {
+                    fill: $main-color;
+                }
+            }
+        }
+        .social-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin-left: -10px;
+            margin-top: 15px;
+            a {
+                display: block;
+                padding: 10px;
+            }
+            svg {
+                fill: white;
+                width: 15px;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .footer-reassurance {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-copy {
+        text-transform: uppercase;
+        font-size: 9px;
+        letter-spacing: 1px;
+        color: #aaa;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0 0;
+        display: flex;
+        text-decoration: none;
+        position: absolute;
+        bottom: 3vw;
+        left: 3vw;
+    }
+}
+
+.footer-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .footer-nav__item {
+        padding: 0 10px;
+        overflow: hidden;
+        a {
+            height: 100%;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 10px 0;
+            &::after {
+                position: relative;
+                top: 50%;
+                transform: translateY(50%);
+                width: 5px;
+                height: 5px;
+                display: block;
+                content: "";
+                border: solid 1px #FF7900;
+                background: transparent;
+                border-radius: 100%;
+                margin-left: 3px;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+    }
+}
+
+.reassurance-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    flex: 0 0 100%;
+    li {
+        text-align: center;
+        padding: 0 3vw;
+        &:first-child {
+            margin-top: 0
+        }
+        svg {
+            margin: 0 auto;
+            width: auto;
+            height: 40px;
+        }
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            color: #FFFFFF;
+            letter-spacing: 3px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 0;
+            font-size: 10px;
+            color: #FFFFFF;
+            letter-spacing: 1.25px;
+            text-align: center;
+            line-height: 16.8px;
+            text-transform: none;
+        }
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+    margin-top: auto;
+    li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 15px;
+        a {
+            padding: 0 0;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            color: #aaa;
+            letter-spacing: 3px;
+            text-decoration: none;
+            white-space: nowrap;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        &::after {
+            width: 1px;
+            height: 10px;
+            background: #aaa;
+            content: "";
+            display: block;
+            margin-left: 30px;
+        }
+    }
+}
+
+.btn-prev {
+    &:hover {
+        g.arrow {
+            transform: translate(17%, 40%);
+            transition: .3s;
+            //animation: arrowLeft .3s;
+        }
+    }
+}
+
+.btn-next {
+    &:hover {
+        g.arrow {
+            transform: translate(19%, 39%);
+            transition: .3s;
+            //animation: arrowRight .3s;
+        }
+    }
+}
+
+
+
+//Responsive
+@import 'respon.scss';
+
+//Animation
+// @keyframes arrowLeft {
+//     from {
+//         transform: translate(0, 40%);
+//     }
+//     to {
+//         transform: translate(17%, 40%);
+//     }
+// }
+
+// @keyframes arrowRight {
+//     from {
+//         transform: translate(0, 39%);
+//     }
+//     to {
+//         transform: translate(20%, 39%);
+//     }
+// }

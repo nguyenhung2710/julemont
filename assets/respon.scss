@@ -1,0 +1,26 @@
+@media screen and (min-width: 320px) {
+    .wide-title {
+        font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
+    }
+}
+//Mobile
+@media screen and (max-width: 739px) {
+    * {
+        color: blue;
+    }
+}
+
+//Tablet 
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+//Ipad pro + laptop 
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+
+}
+
+// 2K
+@media screen and (min-width: 2047px) {
+
+}
