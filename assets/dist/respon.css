@@ -19,7 +19,7 @@
   }
 
   .nav-list .nav-list__item a {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .breadcrumb {
@@ -86,23 +86,6 @@
   .main-header {
     padding-top: 0;
     padding-bottom: 0;
-  }
-  .main-header .main-nav .nav-list {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 80%;
-    height: 100vh;
-    background: black;
-    z-index: 9;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0;
-    overflow-y: scroll;
-    pointer-events: all;
-    justify-content: flex-start;
-    padding: 12vw 0 0 0;
-    border-left: solid 1px #FF7900;
   }
   .main-header .main-nav .main-nav__right {
     flex: 0 0 auto;
@@ -181,6 +164,73 @@
     background-position: center -12rem;
   }
 }
+@media screen and (max-width: 1023px) {
+  .main-header .main-nav .nav-list {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 80%;
+    height: 100vh;
+    background: black;
+    z-index: 9;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    overflow-y: scroll;
+    pointer-events: all;
+    justify-content: flex-start;
+    padding: 12vw 0 0 0;
+    border-left: solid 1px #FF7900;
+  }
+  .main-header .main-nav .nav-list .nav-list__item {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    flex: 0 0 auto;
+  }
+  .main-header .main-nav .nav-list .cloned-element {
+    display: block;
+  }
+  .main-header .main-nav .nav-list .cloned-element--full {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .main-header .main-nav .nav-list .main-nav__lang {
+    display: flex;
+    position: relative;
+    left: auto;
+    right: 0;
+    bottom: 100%;
+    margin: 0 0 0 auto;
+  }
+  .main-header .main-logo {
+    position: relative;
+    z-index: 999;
+    transform: translate3d(0, 0, 0.1px);
+  }
+  .main-header .colophon-legal {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+    margin: auto 0 0;
+    border-top: solid 1px #FF7900;
+    padding: 15px 6vw;
+    overflow: hidden;
+  }
+  .main-header .colophon-legal li {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+  }
+  .main-header .colophon-legal li a {
+    padding: 17px 0;
+    display: block;
+  }
+}
+@media (max-width: 1023px) and (max-width: 768px) {
+  .main-header .colophon-legal {
+    padding: 30px 60px 30px 60px;
+  }
+}
 @media screen and (max-width: 992px) {
   .home-sens .home-sens__left .img-wrapper:last-child::before {
     position: absolute;
@@ -238,6 +288,13 @@
     left: 100%;
     width: 100%;
     padding: 120px 0 0 0;
+  }
+  .main-header .main-nav .nav-list .nav-list__item {
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 6%;
+    display: flex;
+    align-items: center;
   }
   .main-footer {
     padding: 30px;
@@ -336,6 +393,10 @@
     margin-bottom: 0;
     flex-direction: column;
   }
+
+  .colophon-legal li a {
+    padding: 20px 0;
+  }
 }
 @media screen and (max-width: 739px) {
   .main-nav__lang {
@@ -357,7 +418,11 @@
   .main-header .main-nav .nav-list {
     width: 100%;
     padding: 90px 0 0 0;
-    display: none;
+  }
+  .main-header .main-nav .nav-list .nav-list__item {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 6px 0;
   }
   .main-header .btn-menu {
     display: flex;
@@ -445,5 +510,9 @@
 
   .breadcrumb {
     display: none;
+  }
+
+  .nav-list .nav-list__item a {
+    font-size: 12px;
   }
 }

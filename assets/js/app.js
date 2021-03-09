@@ -1,4 +1,12 @@
 jQuery(document).ready(function ($) {
+    // Navbar full
+    $(function() {
+        $(".main-nav__center").css("transform", "translate(-100%, 0)");
+        $("#Oval").click(function() {
+            
+        });
+    });
+
     //Swiper
     var galleryTitle = new Swiper(".product-description", {
         direction: "vertical",

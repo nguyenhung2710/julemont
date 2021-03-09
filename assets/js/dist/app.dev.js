@@ -1,7 +1,12 @@
 "use strict";
 
 jQuery(document).ready(function ($) {
-  //Swiper
+  // Navbar full
+  $(function () {
+    $(".main-nav__center").css("transform", "translate(-100%, 0)");
+    $("#Oval").click(function () {});
+  }); //Swiper
+
   var galleryTitle = new Swiper(".product-description", {
     direction: "vertical",
     spaceBetween: 30,
@@ -12,6 +17,9 @@ jQuery(document).ready(function ($) {
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
     breakpoints: {
+      280: {
+        height: 218
+      },
       1024: {
         height: 242
       }
