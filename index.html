@@ -14,10 +14,14 @@
         <link rel="stylesheet" href="https://use.typekit.net/kij2nsk.css">
         <!-- Swiper -->
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- Locomo -->
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        <!-- Css -->
         <link rel="stylesheet" href="assets/dist/base.css">
         <link rel="stylesheet" href="assets/dist/main.css">
     </head>
-    <body data-scroll-container>
+    <body >
         <header class="main-header">
             <nav class="main-nav">
                 <a href="#" class="main-nav__left main-logo col-xl-2 col-lg-1 col-1">
@@ -53,402 +57,424 @@
                         </li>
                     </ul> 
                     <button class="main-nav__cart cart-button">BAG</button>
+                    <button class="main-nav__burguer btn-menu">
+                        <svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>Menu Burguer</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <circle id="Oval" stroke="#FF7900" cx="26" cy="26" r="25"></circle>
+                            </g>
+                        </svg>
+                        <span></span><span></span><span></span>
+                    </button>
                 </div>
             </nav>
             <div class="main-header-background"></div>
+            <div class="menu-overlay"></div>
         </header>
         <div id="global">
-            <main class="wrapper">
-                <div class="container container--full home-page-video">
-                    <div class="home-page-video__wrapper">
-                        <h1 class="wide-title wide-title--decorative">Life is too short to look like others</h1>
-                    </div>
-                    <div class="container-video">
-                        <div class="container-video__wrapper">
-                            <video width="100%" height="100%" autoplay="" muted="" loop="" playsinline="">
-                                <source type="video/mp4"
-                                    src="https://julemont-watches.com/medias/internalpageblockcontents/26/image/accueilok.mp4"
-                                    class="loaded">
-                            </video>
+            <div>
+                <main class="wrapper">
+                    <div class="container container--full home-page-video">
+                        <div class="home-page-video__wrapper">
+                            <h1 class="wide-title wide-title--decorative">Life is too short to look like others</h1>
                         </div>
-                    </div>
-                    <a href="#home-sens" class="scroll-indicator">
-                        <svg width="100%" height="100%" viewBox="0 0 60 69" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>Scroll down</title>
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="btn-invittoscroll"
-                                    transform="translate(30.000000, 34.000000) rotate(-270.000000) translate(-30.000000, -34.000000) translate(-4.000000, 5.000000)">
-                                    <path
-                                        d="M39,54 C51.0921948,54 61.1792289,45.4148864 63.4984175,34.0073439 C63.8273266,32.3895179 64,30.714924 64,29 C64,15.1928813 52.8071187,4 39,4 C25.1928813,4 14,15.1928813 14,29 C14,40.0941303 21.2264051,49.5004433 31.2289157,52.7686394"
-                                        id="scroll-path" stroke="#FF7900" stroke-linecap="round"
-                                        transform="translate(39.000000, 29.000000) rotate(-279.000000) translate(-39.000000, -29.000000) "
-                                        style="transition: .5s;"></path>
-                                    <g id="arrow" transform="translate(-0.000000, 23.000000)" stroke="#F3F3F3"
-                                        stroke-width="0.5">
-                                        <polyline id="Path-12"
-                                            points="27.007078 12.0525609 38.9345579 6.00582314 27.007078 1.2126596e-12">
-                                        </polyline>
-                                        <line x1="38.9345579" y1="6.02628045" x2="7.57912251e-14" y2="6.02628045"
-                                            id="Path-13"></line>
+                        <div class="container-video">
+                            <div class="container-video__wrapper">
+                                <video width="100%" height="100%" autoplay="" muted="" loop="" playsinline="">
+                                    <source type="video/mp4"
+                                        src="https://julemont-watches.com/medias/internalpageblockcontents/26/image/accueilok.mp4"
+                                        class="loaded">
+                                </video>
+                            </div>
+                        </div>
+                        <a href="#home-sens" class="scroll-indicator">
+                            <svg width="100%" height="100%" viewBox="0 0 60 69" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Scroll down</title>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="btn-invittoscroll"
+                                        transform="translate(30.000000, 34.000000) rotate(-270.000000) translate(-30.000000, -34.000000) translate(-4.000000, 5.000000)">
+                                        <path
+                                            d="M39,54 C51.0921948,54 61.1792289,45.4148864 63.4984175,34.0073439 C63.8273266,32.3895179 64,30.714924 64,29 C64,15.1928813 52.8071187,4 39,4 C25.1928813,4 14,15.1928813 14,29 C14,40.0941303 21.2264051,49.5004433 31.2289157,52.7686394"
+                                            id="scroll-path" stroke="#FF7900" stroke-linecap="round"
+                                            transform="translate(39.000000, 29.000000) rotate(-279.000000) translate(-39.000000, -29.000000) "
+                                            style="transition: .5s;"></path>
+                                        <g id="arrow" transform="translate(-0.000000, 23.000000)" stroke="#F3F3F3"
+                                            stroke-width="0.5">
+                                            <polyline id="Path-12"
+                                                points="27.007078 12.0525609 38.9345579 6.00582314 27.007078 1.2126596e-12">
+                                            </polyline>
+                                            <line x1="38.9345579" y1="6.02628045" x2="7.57912251e-14" y2="6.02628045"
+                                                id="Path-13"></line>
+                                        </g>
                                     </g>
                                 </g>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div id="home-sens" class="container container--wide home-sens">
-                    <div class="home-sens__left col-lg-6">
-                        <div class="img-wrapper">
-                            <div class="js-replace-image"></div>
-                        </div>
-                        <div class="img-wrapper">
-                            <div class="js-replace-image"></div>
-                        </div>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="home-sens__right offset-lg-1 col-lg-4">
-                        <h2 class="wide-title margin-bottom-default">
-                            <span class="wide-title__item">BE</span>
-                            <span class="wide-title__item">YOURSELF</span>
-                        </h2>
-                        <div class="wide-content">
-                            <p>We dreamed of a beautiful object that one buys for themself. The Julémont watch must be
-                                elegant and have character. A watch that reflects who wears it, with a strong identity !
-                            </p>
-                            <div class="margin-top-default offset-lg-1">
-                                <a href="#" class="wide-btn">CONCEPT</a>
+                    <div id="home-sens" class="container container--wide home-sens">
+                        <div class="home-sens__left col-lg-6">
+                            <div class="img-wrapper">
+                                <div class="js-replace-image"
+                                    style="background-image: url('https://julemont-watches.com/resizer/medias/internalpageblockcontents/5/image/sans-titre-2@c750x951.jpg')">
+                                </div>
+                            </div>
+                            <div class="img-wrapper">
+                                <div class="js-replace-image"
+                                    style="background-image: url('https://julemont-watches.com/resizer/medias/internalpageblockcontents/6/image/carl-nenzen-loven-busqfoj6i80-unsplash@c750x951.jpg');">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-sens__right offset-lg-1 col-lg-4">
+                            <h2 class="wide-title margin-bottom-default">
+                                <span class="wide-title__item">BE</span>
+                                <span class="wide-title__item">YOURSELF</span>
+                            </h2>
+                            <div class="wide-content">
+                                <p>We dreamed of a beautiful object that one buys for themself. The Julémont watch must
+                                    be
+                                    elegant and have character. A watch that reflects who wears it, with a strong
+                                    identity !
+                                </p>
+                                <div class="margin-top-default offset-lg-1">
+                                    <a href="#" class="wide-btn">CONCEPT</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container container--wide home-lovers">
-                    <div class="col-lg-4 col-md-8 col-12 home-lovers__left">
-                        <div class="img-wrapper">
-                            <div class="js-replace-image"></div>
+                    <div class="container container--wide home-lovers">
+                        <div class="col-lg-4 col-md-8 col-12 home-lovers__left">
+                            <div class="img-wrapper">
+                                <div class="js-replace-image" style="background-image: url('https://julemont-watches.com/resizer/medias/internalpageblockcontents/7/image/johan-mouchet-wlmu7-nfvae-unsplash@c750x1052.jpg');"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-12 home-lovers__center">
-                        <h2 class="wide-title margin-bottom-default">
-                            <span class="wide-title__item">I</span>
-                            <span class="wide-title__item">DARED</span>
-                        </h2>
-                        <div class="wide-content">
-                            <p>
-                                Creating a new design with shapes which arouse curiosity. Before all, our approach is to
-                                speak to the heart of aesthetes, who desire purity of lines. We aimed to create an
-                                architectural and bold watch.
-                            </p>
-                            <div class="margin-top-default offset-lg-1">
-                                <a href="#" class="wide-btn">ABOUT US</a>
+                        <div class="col-lg-4 col-md-12 col-12 home-lovers__center">
+                            <h2 class="wide-title margin-bottom-default">
+                                <span class="wide-title__item">I</span>
+                                <span class="wide-title__item">DARED</span>
+                            </h2>
+                            <div class="wide-content">
+                                <p>
+                                    Creating a new design with shapes which arouse curiosity. Before all, our approach is to
+                                    speak to the heart of aesthetes, who desire purity of lines. We aimed to create an
+                                    architectural and bold watch.
+                                </p>
+                                <div class="margin-top-default offset-lg-1">
+                                    <a href="#" class="wide-btn">ABOUT US</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-lg-4 home-lovers__right">
+                            <div class="img-wrapper">
+                                <div class="js-replace-image" style="background-image: url('https://julemont-watches.com/resizer/medias/internalpageblockcontents/8/image/dsc-0041@c750x1052.jpg');"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8 col-lg-4 home-lovers__right">
-                        <div class="img-wrapper">
-                            <div class="js-replace-image"></div>
+                    <div class="container home-product">
+                        <div class="home-product__header">
+                            <h2 class="wide-title wide-title--decorative">
+                                Our latest collection
+                            </h2>
                         </div>
-                    </div>
-                </div>
-                <div class="container home-product">
-                    <div class="home-product__header">
-                        <h2 class="wide-title wide-title--decorative">
-                            Our latest collection
-                        </h2>
-                    </div>
-                    <div class="slideshow-wrapper">
-                        <div class="swiper-container home-product__slideshow">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/15/image_side/j1-anthracite@f750x750.png"
-                                            width="800" height="800" alt="J1" class="lazyload">
-                                    </a>
+                        <div class="slideshow-wrapper">
+                            <div class="swiper-container home-product__slideshow">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/15/image_side/j1-anthracite@f750x750.png"
+                                                width="800" height="800" alt="J1" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/17/image_side/j2-parme@f750x750.png"
+                                                width="800" height="800" alt="J2" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/18/image_side/j3-noir@f750x750.png"
+                                                width="800" height="800" alt="J3" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/20/image_side/j4-blanc@f750x750.png"
+                                                width="800" height="800" alt="J4" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/1/image_side/j1-1-s@f750x750.png"
+                                                width="800" height="800" alt="J5" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/23/image_side/j6-orange@f750x750.png"
+                                                width="800" height="800" alt="J6" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/24/image_side/j7-anthracite@f750x750.png"
+                                                width="800" height="800" alt="J7" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/25/image_side/j8-noir@f750x750.png"
+                                                width="800" height="800" alt="J8" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/6/image_side/j9-2-side@f750x750.png"
+                                                width="800" height="800" alt="J9" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/26/image_side/j10-orange@f750x750.png"
+                                                width="800" height="800" alt="J10" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/7/image_side/bracelets-side@f750x750.png"
+                                                width="800" height="800" alt="Straps" class="lazyload">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img data-src="https://julemont-watches.com/resizer/medias/productattributes/60/image_side/julemont-ecrin-boite-rotative@f750x750.png"
+                                                width="800" height="800" alt="Winder" class="lazyload">
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/17/image_side/j2-parme@f750x750.png"
-                                            width="800" height="800" alt="J2" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/18/image_side/j3-noir@f750x750.png"
-                                            width="800" height="800" alt="J3" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/20/image_side/j4-blanc@f750x750.png"
-                                            width="800" height="800" alt="J4" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/1/image_side/j1-1-s@f750x750.png"
-                                            width="800" height="800" alt="J5" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/23/image_side/j6-orange@f750x750.png"
-                                            width="800" height="800" alt="J6" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/24/image_side/j7-anthracite@f750x750.png"
-                                            width="800" height="800" alt="J7" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/25/image_side/j8-noir@f750x750.png"
-                                            width="800" height="800" alt="J8" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/6/image_side/j9-2-side@f750x750.png"
-                                            width="800" height="800" alt="J9" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/26/image_side/j10-orange@f750x750.png"
-                                            width="800" height="800" alt="J10" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/7/image_side/bracelets-side@f750x750.png"
-                                            width="800" height="800" alt="Straps" class="lazyload">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">
-                                        <img data-src="https://julemont-watches.com/resizer/medias/productattributes/60/image_side/julemont-ecrin-boite-rotative@f750x750.png"
-                                            width="800" height="800" alt="Winder" class="lazyload">
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="btn-prev">
-                                <svg width="100%" height="100%" viewBox="0 0 116 98" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill: #060605;">
-                                    <title>Arrow Left</title>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="svggg"
-                                            transform="translate(58.166667, 49.500000) rotate(-270.000000) translate(-58.166667, -49.500000) translate(9.666667, -7.000000)">
-                                            <g id="btn-invittoscroll"
-                                                transform="translate(48.666667, 56.500000) rotate(90.000000) translate(-48.666667, -56.500000) translate(-7.833333, 8.500000)">
-                                                <path
-                                                    d="M65,90 C85.153658,90 101.965382,75.6914773 105.830696,56.6789065 C106.378878,53.9825298 106.666667,51.19154 106.666667,48.3333333 C106.666667,25.3214688 88.0118645,6.66666667 65,6.66666667 C41.9881355,6.66666667 23.3333333,25.3214688 23.3333333,48.3333333 C23.3333333,66.8235505 35.3773418,82.5007388 52.0481928,87.9477323"
-                                                    id="Oval-Copy-30" stroke="#FF7900" stroke-width="1.66666667"
-                                                    stroke-linecap="round"
-                                                    transform="translate(65.000000, 48.333333) rotate(81.000000) translate(-65.000000, -48.333333) "
-                                                    style="stroke-dashoffset: 0px;"></path>
-                                                <g class="arrow" transform="translate(0.000000, 38.333333)"
-                                                    stroke="#F3F3F3" stroke-width="0.833333333">
-                                                    <polyline id="Path-12"
-                                                        points="45.0117967 20.0876015 64.8909298 10.0097052 45.0117967 2.02109933e-12">
-                                                    </polyline>
-                                                    <line x1="64.8909298" y1="10.0438008" x2="1.26318709e-13"
-                                                        y2="10.0438008" id="Path-13"></line>
+                                <button class="btn-prev" onclick="btnLeft()">
+                                    <svg width="100%" height="100%" viewBox="0 0 116 98" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill: #060605;">
+                                        <title>Arrow Left</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="svggg"
+                                                transform="translate(58.166667, 49.500000) rotate(-270.000000) translate(-58.166667, -49.500000) translate(9.666667, -7.000000)">
+                                                <g id="btn-invittoscroll"
+                                                    transform="translate(48.666667, 56.500000) rotate(90.000000) translate(-48.666667, -56.500000) translate(-7.833333, 8.500000)">
+                                                    <path
+                                                        d="M65,90 C85.153658,90 101.965382,75.6914773 105.830696,56.6789065 C106.378878,53.9825298 106.666667,51.19154 106.666667,48.3333333 C106.666667,25.3214688 88.0118645,6.66666667 65,6.66666667 C41.9881355,6.66666667 23.3333333,25.3214688 23.3333333,48.3333333 C23.3333333,66.8235505 35.3773418,82.5007388 52.0481928,87.9477323"
+                                                        id="i0" stroke="#FF7900" stroke-width="1.66666667"
+                                                        stroke-linecap="round"
+                                                        transform="translate(65.000000, 48.333333) rotate(81.000000) translate(-65.000000, -48.333333) "
+                                                        style="stroke-dashoffset: 0px;"></path>
+                                                    <g class="arrow-prev" transform="translate(0.000000, 38.333333)"
+                                                        stroke="#F3F3F3" stroke-width="0.833333333">
+                                                        <polyline id="Path-12"
+                                                            points="45.0117967 20.0876015 64.8909298 10.0097052 45.0117967 2.02109933e-12">
+                                                        </polyline>
+                                                        <line x1="64.8909298" y1="10.0438008" x2="1.26318709e-13"
+                                                            y2="10.0438008" id="Path-13"></line>
+                                                    </g>
                                                 </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
-                            </button>
-                            <button class="btn-next">
-                                <svg width="100%" height="100%" viewBox="0 0 116 98" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <title>Arrow Right</title>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="svggg"
-                                            transform="translate(58.166667, 49.500000) rotate(-90.000000) translate(-58.166667, -49.500000) translate(9.666667, -7.000000)">
-                                            <g id="btn-invittoscroll"
-                                                transform="translate(48.666667, 56.500000) rotate(90.000000) translate(-48.666667, -56.500000) translate(-7.833333, 8.500000)">
-                                                <path
-                                                    d="M65,90 C85.153658,90 101.965382,75.6914773 105.830696,56.6789065 C106.378878,53.9825298 106.666667,51.19154 106.666667,48.3333333 C106.666667,25.3214688 88.0118645,6.66666667 65,6.66666667 C41.9881355,6.66666667 23.3333333,25.3214688 23.3333333,48.3333333 C23.3333333,66.8235505 35.3773418,82.5007388 52.0481928,87.9477323"
-                                                    id="Oval-Copy-30" stroke="#FF7900" stroke-width="1.66666667"
-                                                    stroke-linecap="round"
-                                                    transform="translate(65.000000, 48.333333) rotate(81.000000) translate(-65.000000, -48.333333) ">
-                                                </path>
-                                                <g class="arrow" transform="translate(0.000000, 38.333333)"
-                                                    stroke="#F3F3F3" stroke-width="0.833333333">
-                                                    <polyline id="Path-12"
-                                                        points="45.0117967 20.0876015 64.8909298 10.0097052 45.0117967 2.02109933e-12">
-                                                    </polyline>
-                                                    <line x1="64.8909298" y1="10.0438008" x2="1.26318709e-13"
-                                                        y2="10.0438008" id="Path-13"></line>
+                                    </svg>
+                                </button>
+                                <button class="btn-next"  onclick="btnRight()">
+                                    <svg width="100%" height="100%" viewBox="0 0 116 98" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="transform: scale(1,-1);">
+                                        <title>Arrow Right</title>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="svggg"
+                                                transform="translate(58.166667, 49.500000) rotate(-90.000000) translate(-58.166667, -49.500000) translate(9.666667, -7.000000)">
+                                                <g id="btn-invittoscroll"
+                                                    transform="translate(48.666667, 56.500000) rotate(90.000000) translate(-48.666667, -56.500000) translate(-7.833333, 8.500000)">
+                                                    <path
+                                                        d="M65,90 C85.153658,90 101.965382,75.6914773 105.830696,56.6789065 C106.378878,53.9825298 106.666667,51.19154 106.666667,48.3333333 C106.666667,25.3214688 88.0118645,6.66666667 65,6.66666667 C41.9881355,6.66666667 23.3333333,25.3214688 23.3333333,48.3333333 C23.3333333,66.8235505 35.3773418,82.5007388 52.0481928,87.9477323"
+                                                        id="i1" stroke="#FF7900" stroke-width="1.66666667"
+                                                        stroke-linecap="round"
+                                                        transform="translate(65.000000, 48.333333) rotate(81.000000) translate(-65.000000, -48.333333) ">
+                                                    </path>
+                                                    <g class="arrow-next" transform="translate(0.000000, 38.333333)"
+                                                        stroke="#F3F3F3" stroke-width="0.833333333">
+                                                        <polyline id="Path-12"
+                                                            points="45.0117967 20.0876015 64.8909298 10.0097052 45.0117967 2.02109933e-12">
+                                                        </polyline>
+                                                        <line x1="64.8909298" y1="10.0438008" x2="1.26318709e-13"
+                                                            y2="10.0438008" id="Path-13"></line>
+                                                    </g>
                                                 </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
-                            </button>
-                            
-                        </div>
-                        <div class="product-title">
-                            <div class="product-title__slide">
-                                <ul class="title-wrapper swiper-wrapper">
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J1
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J2
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J3
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J4
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J5
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J6
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J7
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J8
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J9
-                                    </li>
-                                    <li class="swiper-slide">
-                                        <p>Model</p>J10
-                                    </li>
-                                    <li class="swiper-slide">
-                                        Straps
-                                    </li>
-                                    <li class="swiper-slide">
-                                        Winder
-                                    </li>
-                                </ul>
+                                    </svg>
+                                </button>
+                                
+                            </div>
+                            <div class="product-title">
+                                <div class="product-title__slide">
+                                    <ul class="title-wrapper swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J1
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J2
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J3
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J4
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J5
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J6
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J7
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J8
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J9
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <p>Model</p>J10
+                                        </li>
+                                        <li class="swiper-slide">
+                                            Straps
+                                        </li>
+                                        <li class="swiper-slide">
+                                            Winder
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-description">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Pink-copper pvd case<br>
+                                            Matt black dial<br>
+                                            Pink-copper numbers </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Black Matt pvd case<br>
+                                            Purple guilloché dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Black matt pvd case<br>
+                                            Anthracite dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Black Matt pvd case<br>
+                                            White guilloché dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Steel case<br>
+                                            Purple guilloché dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Steel case<br>
+                                            Anthracite dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Steel case<br>
+                                            White guilloché dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Black Matt pvd case<br>
+                                            Matt black dial<br>
+                                            Pink-copper numbers </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Steel case<br>
+                                            Turquoise guilloché dial </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Steel case<br>
+                                            White guilloché dial<br>
+                                            Orange hands </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Vegetable rubber<br>
+                                            Made in Italy<br>
+                                            Recyclables<br>
+                                            Large 22mm <br>
+                                            Buckle 22mm<br>
+                                            Unisex size </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>
+                                            Winder instead of<br>
+                                            the standard case<br>
+                                            Mdf light oak veneer<br>
+                                            20.000 hours guarantee<br>
+                                            Hand made in Belgium </p>
+                                        <a href="#" class="btn-main-line">Discover</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="product-description">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <p>
-                                        Pink-copper pvd case<br>
-                                        Matt black dial<br>
-                                        Pink-copper numbers </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
+                        <div class="container home-product__footer">
+                            <a href="#" class="wide-btn">All our products</a>
+                        </div>
+                    </div>
+                    <div class="container container--full push-footer">
+                        <div class="push-footer__inner">
+                            <div class="col-lg-4 col-md-8 col-12">
+                                <p>Want to be bold ?</p>
+                            </div>
+                            <div class="push-footer-container">
+                                <div class="push-footer-container__left col-sm-6">
+                                    <a href="#" class="wide-btn">
+                                        Contact us
+                                    </a>
                                 </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Black Matt pvd case<br>
-                                        Purple guilloché dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
+                                <div class="col-sm-6">
+                                    <a href="#" class="wide-btn wide-btn-invert">
+                                        Retailers
+                                    </a>
                                 </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Black matt pvd case<br>
-                                        Anthracite dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Black Matt pvd case<br>
-                                        White guilloché dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Steel case<br>
-                                        Purple guilloché dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Steel case<br>
-                                        Anthracite dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Steel case<br>
-                                        White guilloché dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Black Matt pvd case<br>
-                                        Matt black dial<br>
-                                        Pink-copper numbers </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Steel case<br>
-                                        Turquoise guilloché dial </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Steel case<br>
-                                        White guilloché dial<br>
-                                        Orange hands </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Vegetable rubber<br>
-                                        Made in Italy<br>
-                                        Recyclables<br>
-                                        Large 22mm <br>
-                                        Buckle 22mm<br>
-                                        Unisex size </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <p>
-                                        Winder instead of<br>
-                                        the standard case<br>
-                                        Mdf light oak veneer<br>
-                                        20.000 hours guarantee<br>
-                                        Hand made in Belgium </p>
-                                    <a href="#" class="btn-main-line">Discover</a>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="push-footer__cover">
+                            <!-- <div class="replace-image" data-parallax="scroll"
+                                data-image-src="https://julemont-watches.com/assets/images/push-contact-cover.jpg">
+                            </div> -->
+                            <!-- <div class="parallax-window" data-parallax="scroll"
+                                data-image-src="https://julemont-watches.com/assets/images/push-contact-cover.jpg"></div> -->
+                            <div class="replace-image"
+                                style="background-image: url('https://julemont-watches.com/assets/images/push-contact-cover.jpg');"
+                                data-paroller-factor="0.1" data-paroller-type="foreground">
                             </div>
                         </div>
                     </div>
-                    <div class="container home-product__footer">
-                        <a href="#" class="wide-btn">All our products</a>
-                    </div>
-                </div>
-                <div class="container container--full push-footer">
-                    <div class="push-footer__inner">
-                        <div class="col-lg-4 col-md-8 col-12">
-                            <p>Want to be bold ?</p>
-                        </div>
-                        <div class="push-footer-container">
-                            <div class="push-footer-container__left col-sm-6">
-                                <a href="#" class="wide-btn">
-                                    Contact us
-                                </a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="#" class="wide-btn wide-btn-invert">
-                                    Retailers
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="push-footer__cover">
-                        <div class="replace-image">
-                            <!-- <img alt="push contact" width="1922" height="1101"
-                                data-src="https://julemont-watches.com/assets/images/push-contact-cover.jpg"
-                                class="lazyload"> -->
-                        </div>
-                    </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>  
         <footer class="main-footer">
             <div class="main-footer__logo col-12">
@@ -599,12 +625,20 @@
 
 
 
-        <!-- <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.3.11/dist/locomotive-scroll.min.js"></script> -->
+
+        <!-- Swiper -->
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+        <!-- Lazyload -->
         <script src="http://afarkas.github.io/lazysizes/lazysizes.min.js"></script>
+        <!-- Paroller -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paroller.js/1.4.7/jquery.paroller.min.js" integrity="sha512-/YNPbFUTvpH1Ecv9UkU6plNvm+MwskxOr6/IR/58Kb0gO0DCN2h7OTNC2GCq6E4RgOYUbZkEPg8tXO5lZ3Kx+A==" crossorigin="anonymous"></script>
+        <!-- Js -->
         <script src="assets/js/app.js"></script>
+        <!-- Smooth Scroll -->
+        <script src="assets/js/scrooth.js"></script>
         <script>
             //Scroll indicator
             var path = document.querySelector('#scroll-path');
@@ -624,16 +658,70 @@
                 }
             });
         </script>
-        <!-- <script>
-            // var swiper = new Swiper('.swiper-container');
-            var swiper = new Swiper('.swiper-container', {
-                navigation: {
-                nextEl: '.btn-next',
-                prevEl: '.btn-prev',
-                },
-            });
-            var title = new Swiper('.product-title__slide');
-            var description = new Swiper('.product-description');
-        </script> -->
+        <script>
+            //Button swiper
+            btnLeft();
+            function btnLeft() {
+                var current_frame = 0;
+                var total_frames = 20;
+                var path = new Array();
+                var length = new Array();
+                var i = 0
+                path[i] = document.getElementById("i0");
+                l = path[i].getTotalLength();
+                length[i] = l;
+                path[i].style.strokeDasharray = l + ' ' + l;
+                path[i].style.strokeDashoffset = l;
+                var handle = 0;
+                var draw = function () {
+                    var progress = current_frame / total_frames;
+                    if (progress > 1) {
+                        for (var j = 0; j < path.length; j++) {
+                            path[j].setAttribute("class", "fadein");
+                        }
+                        window.cancelAnimationFrame(handle);
+                    } else {
+                        current_frame++;
+                        for (var j = 0; j < path.length; j++) {
+                            path[j].style.strokeDashoffset = Math.floor(length[j] * (1 - progress));
+                            path[j].setAttribute("class", "");
+                        }
+                        handle = window.requestAnimationFrame(draw);
+                    }
+                };
+                draw();
+            }
+            btnRight();
+            function btnRight() {
+                var current_frame = 0;
+                var total_frames = 20;
+                var path = new Array();
+                var length = new Array();
+                var i = 1;
+                path[i] = document.getElementById("i1");
+                l = path[i].getTotalLength();
+                length[i] = l;
+                path[i].style.strokeDasharray = l + ' ' + l;
+                path[i].style.strokeDashoffset = l;
+                var handle = 0;
+                var draw = function () {
+                    var progress = current_frame / total_frames;
+                    if (progress > 1) {
+                        for (var j = 1; j < path.length; j++) {
+                            path[j].setAttribute("class", "fadein");
+                        }
+                        window.cancelAnimationFrame(handle);
+                    } else {
+                        current_frame++;
+                        for (var j = 1; j < path.length; j++) {
+                            path[j].style.strokeDashoffset = Math.floor(length[j] * (1 - progress));
+                            path[j].setAttribute("class", "");
+                        }
+                        handle = window.requestAnimationFrame(draw);
+                    }
+                };
+                draw();
+            }
+        </script>
     </body>
 </html>

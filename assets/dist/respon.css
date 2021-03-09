@@ -3,8 +3,109 @@
     font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
   }
 }
-@media screen and (max-width: 739px) {
-  * {
-    color: blue;
+@media screen and (max-width: 768px) {
+  .main-header .main-nav .nav-list {
+    left: 100%;
+    width: 100%;
+    padding: 120px 0 0 0;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1023px) {
+  .main-header .main-nav .nav-list {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 80%;
+    height: 100vh;
+    height: calc((var(--vh, 1vh) * 100));
+    background: black;
+    z-index: 9;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    overflow-y: scroll;
+    pointer-events: all;
+    justify-content: flex-start;
+    padding: 12vw 0 0 0;
+    border-left: solid 1px #FF7900;
+  }
+  .main-header .main-nav .main-nav__right {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+  .main-header .btn-menu {
+    display: flex;
+  }
+  .main-header .menu-overlay {
+    display: block;
+  }
+  .main-nav__lang {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+  .home-sens .home-sens__left .img-wrapper .js-replace-image {
+    height: 38vw;
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position: 4rem 30rem;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .home-sens .home-sens__left .img-wrapper:nth-child(2) .js-replace-image {
+    background-position: center;
+    background-position: 0rem 2rem;
+    height: 41vw;
+  }
+  .home-lovers .home-lovers__right .img-wrapper .js-replace-image {
+    padding-bottom: 140%;
+    background-attachment: fixed;
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    background-position: 41rem 30rem;
+    overflow: hidden;
+  }
+  .home-lovers .home-lovers__left .img-wrapper .js-replace-image {
+    width: 100%;
+    padding-bottom: 140%;
+    background-size: cover;
+    transform: translateY(-10vw);
+  }
+  .home-product .product-description .swiper-slide {
+    letter-spacing: 1.75px;
+    text-transform: none;
+    padding-left: 16px;
+  }
+
+  .breadcrumb {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .main-footer .footer-copy {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .push-footer .push-footer-container {
+    margin-top: 3vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main-header .main-logo {
+    background-size: 100%;
+  }
+
+  .nav-list .nav-list__item a {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-device-width: 1366px) {
+  .js-replace-image {
+    background-attachment: scroll;
   }
 }
