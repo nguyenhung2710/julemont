@@ -10,6 +10,9 @@ jQuery(document).ready(function ($) {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {
+            280: {
+                height: 218,
+            },
             1024: {
                 height: 242,
             },

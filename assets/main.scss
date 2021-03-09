@@ -485,6 +485,7 @@ a {
             // padding-right: 25%;
             height: 13%;
             overflow: hidden;
+            pointer-events: none;
             .product-title__slide {
                 display: flex;
                 align-items: flex-end;
@@ -535,6 +536,7 @@ a {
             width: calc(15% + 28px);
             overflow: hidden;
             height: 11rem;
+            pointer-events: none;
             .swiper-slide {
                 letter-spacing: 1.75px;
                 text-transform: none;
