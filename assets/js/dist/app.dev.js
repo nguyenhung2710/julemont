@@ -3,8 +3,15 @@
 jQuery(document).ready(function ($) {
   // Navbar full
   $(function () {
-    $(".main-nav__center").css("transform", "translate(-100%, 0)");
     $("#Oval").click(function () {});
+  }); //Toggle
+
+  $(".main-nav__burguer").click(function () {
+    $(".nav-list").toggleClass("nav-list--on");
+    $(".btn-menu").toggleClass("open");
+    $(".nav-list__item").toggleClass("nav-list__item--up");
+    $(".colophon-legal__item").toggleClass("colophon-legal__item--left");
+    $(".main-nav__lang-item").toggleClass("nav__lang--up");
   }); //Swiper
 
   var galleryTitle = new Swiper(".product-description", {
