@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
         $(".nav-list__item").toggleClass("nav-list__item--up");
         $(".colophon-legal__item").toggleClass("colophon-legal__item--left");
         $(".main-nav__lang-item").toggleClass("nav__lang--up");
-
+        $("..nav-list").toggleClass("nav-list--on");
     });
 
     //Swiper

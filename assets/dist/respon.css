@@ -30,6 +30,19 @@
     transform: none;
   }
 }
+@media screen and (min-width: 1024px) {
+  .cloned-element {
+    display: none;
+  }
+
+  .nav-list .nav-list__item a {
+    font-size: 10px;
+  }
+
+  .main-nav__lang {
+    margin-bottom: 5px;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1024px) {
   .home-sens .home-sens__left .img-wrapper .js-replace-image {
     height: 38vw;
@@ -169,23 +182,28 @@
     position: fixed;
     top: 0;
     left: 100%;
-    width: 80%;
+    width: 0;
     height: 100vh;
     background: black;
     z-index: 9;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
-    overflow-y: scroll;
     pointer-events: all;
     justify-content: flex-start;
     padding: 12vw 0 0 0;
     border-left: solid 1px #FF7900;
+    transform: translate(-100%, 0px);
+    transition: 0.5s;
   }
   .main-header .main-nav .nav-list .nav-list__item {
     padding-left: 6vw;
     padding-right: 6vw;
     flex: 0 0 auto;
+  }
+  .main-header .main-nav .nav-list .nav-list__item a:after {
+    transform: translateY(0%);
+    top: 0;
   }
   .main-header .main-nav .nav-list .cloned-element {
     display: block;
@@ -201,6 +219,9 @@
     right: 0;
     bottom: 100%;
     margin: 0 0 0 auto;
+  }
+  .main-header .main-nav .nav-list.nav-list--on {
+    width: 80%;
   }
   .main-header .main-logo {
     position: relative;
@@ -237,6 +258,13 @@
   .main-header .colophon-legal .colophon-legal__item.colophon-legal__item--left {
     transform: translateX(0);
     opacity: 1;
+  }
+  .main-header .btn-menu {
+    display: flex;
+  }
+
+  .nav-list .nav-list__item a {
+    padding: 8px 0;
   }
 }
 @media (max-width: 1023px) and (max-width: 768px) {
@@ -340,7 +368,7 @@
     transform: translateY(0);
     opacity: 1;
   }
-  .main-header .main-nav .nav-list--on {
+  .main-header .main-nav .nav-list.nav-list--on {
     width: 100%;
   }
   .main-footer {
@@ -453,7 +481,7 @@
   .home-sens .home-sens__left .img-wrapper .js-replace-image {
     height: 70vw;
     background-size: 57vw;
-    background-position: 2rem 12rem;
+    background-position: 2rem center;
   }
 }
 @media screen and (min-width: 320px) {
